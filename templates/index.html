@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<title>The Index Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet2.css')}}">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+<form action="http://localhost:5000/loggedin/{{ name }}", method="POST">
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>BeatCovid</b></h1>
+  <p>Welcome to the service of BeatCovid</span></p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+
+<div class="w3-col l8 s12">
+
+  <div class="w3-card-4 w3-margin w3-white">
+    
+    <div class="w3-container">
+      <h3><b>SHORTAGE OF SUPPLIES?</b></h3>
+     
+    </div>
+
+    <div class="w3-container">
+      <!-- <button class="w3-button w3-yellow w3-padding-large w3-margin-bottom">  Normal Supplies </button> -->
+      <!-- <a href = "http://localhost:5000/{{ name }}/normal_demnad" class = "w3-button w3-yellow w3-padding-large w3-margin-bottom" > Normal Supplies</a> -->
+      <input name = normal_demand type = "button" href = 'http://localhost:5000/{{ name }}/normal_demnad ' value = "normal_yes" /> 
+      <br>
+      <button class="w3-button w3-pink w3-padding-large w3-margin-bottom">  Emergency Supplies </button>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+  
+    <div class="w3-container">
+      <h3><b><button class="w3-button w3-light-grey w3-padding-large w3-margin-bottom">  Ask a Question </button></b></h3>
+     
+    </div>
+
+    <div class="w3-container">
+      <p>We have a team of doctors and government officials to answer your question regarding
+        anything about this platform, any query regarding the supplies or opinions about the ongoing
+        crisis. <br> <b> We are here to HELP !! </b>
+       .</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="w3-card-4 w3-margin w3-white">
+  
+    <div class="w3-container">
+      <h3><b><button class="w3-button w3-light-grey w3-padding-large w3-margin-bottom"> <b>Contact the Officials</b> </button></b></h3>
+     
+    </div>
+
+    <div class="w3-container">
+      <p>There is a list of E-Mails Given in the above mentioned link. <br>
+        You can contact them anytime directly through this service.
+        <br> <b>BeatCovid at your service</b> 
+       .</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <img src="{{ url_for ('static', filename='shipment.jpg')}}" alt="goods" style="width:100% ; height: 100%;">
+    <div class="w3-container w3-white">
+      <button class="w3-button w3-white w3-padding-large w3-margin-bottom-10 px "><h3>Track Shipment</h3> </button>
+      <p>Track the shipment of your supply from your office. Just enter the relevant 
+          details and get the status..</p>
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Some of our Experts</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        
+        <span class="w3-large">Doctor A</span><br>
+        <span>Doctor</span>
+      </li>
+      <li class="w3-padding-16">
+        
+        <span class="w3-large">Doctor B</span><br>
+        <span>Doctor</span>
+      </li> 
+      <li class="w3-padding-16">
+        
+        <span class="w3-large">Official A</span><br>
+        <span>Government official</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        
+        <span class="w3-large">Doctor D</span><br>
+        <span>Doctor</span>
+      </li>  
+    </ul>
+  </div>
+  <hr> 
+ 
+  
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom"> Log out </button>
+</div>
+<div id="footer">
+  Copyright &copy; 2020 BeatCovid
+  
+</div>
+</footer>
+</form>
+</body>
+</html>
